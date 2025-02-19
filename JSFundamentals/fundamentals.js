@@ -284,6 +284,4 @@ class PersonClass
 }
 const humpty = new PersonClass("Humpty", 14, false);
 console.log(`${humpty.name} is ${humpty.age} years old, he is ${(humpty.human) ? "a human" : "not a human"}, and ${humpty.canDrive()}.`);
-
-//a
 // #endregion

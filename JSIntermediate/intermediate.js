@@ -1,3 +1,88 @@
+console.log("\n" + "----Q1----");
+// #region [Question 1]
+function ucFirstLetters(str)
+{
+    let capitalisedString = "";
+    const splitWords = str.split(" ") ;
+    for(const word of splitWords)
+    {
+        if(word.length > 0)
+        {
+            capitalisedString += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+        }
+    }
+
+    return capitalisedString.trimEnd();
+}
+
+//Testing with multiple different strings
+console.log(ucFirstLetters("james clear"));
+console.log(ucFirstLetters("john doe"));
+console.log(ucFirstLetters("cat"));
+console.log(ucFirstLetters("1"));
+// #endregion
+
+console.log("\n" + "----Q2----");
+// #region [Question 2]
+function truncate(str, max)
+{
+    let resultStr = "";
+    if(typeof str === 'string')
+    {
+        if(str.length > max)
+            {
+                resultStr = str.slice(0, max).trimEnd() + "...";
+            }
+            else
+            {
+                resultStr = str;
+            }
+    }
+    else
+    {
+        resultStr = "Please input a valid string";
+    }
+    return resultStr;
+}
+
+function newTruncate(str, max)
+{
+    return (typeof str === 'string') ? (str.length > max) ? str.slice(0, max).trimEnd() + "..." : str : "Please input a valid string";
+}
+//Original truncate function
+console.log(truncate("This should truncate.", 10));
+console.log(truncate("All good", 10));
+console.log(truncate(999, 10));
+//New truncate function
+console.log("\n"+newTruncate("This should truncate.", 10));
+console.log(newTruncate("All good", 10));
+console.log(newTruncate(999, 10));
+// #endregion
+
+console.log("\n" + "----Q3----");
+// #region [Question 3]
+const animals = ['Tiger', 'Giraffe']
+
+//Adding new values to the end of the animals array.
+animals.push("Lion");
+animals.push("Hippopotomus");
+
+//Adding new values to the start of the animals array.
+animals.unshift("Crocodile");
+animals.unshift("Elephant");
+
+console.log(`Unsorterd Array: ${animals}`);
+
+sortedArray = animals.sort();
+console.log(`Sorted Array: ${sortedArray}`);
+
+function replaceMiddleAnimal(newValue)
+{
+    arrayLength = animals.length;
+    if(arrayLength )
+}
+// #endregion
+
 console.log("\n" + "----Q8----");
 // #region [Question 8]
 const phoneBookABC = new Map() //an empty map to begin with 
@@ -20,7 +105,7 @@ const phoneBookDEF = new Map(arrayDEF);
 //8.c)Update the phone number for Caroline.
 const carolineNewNumber = '0411554321';
 phoneBookABC.set('Caroline', carolineNewNumber);
-
+ 
 //8.d)Write a function printPhoneBook(contacts) that prints the names and phone numbers in the given Map.
 function printPhoneBook(contacts)
 {
@@ -68,7 +153,6 @@ function sumSalaries(salaries)
 
 salaryTotal = sumSalaries(salaries);
 console.log(salaryTotal);
-//need b
 // #endregion
 
 console.log("\n" + "----Q10----");
@@ -97,4 +181,3 @@ today.setMinutes(today.getMinutes() + 30);
 console.log(today.toLocaleTimeString());
 
 // #endregion
-

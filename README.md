@@ -7,7 +7,7 @@
   <ul>
     <!-- SECTION I -->
     <details>
-      <summary>Exercise 1: What are the results of these expressions?</summary>
+      <summary>Exercise 1: What are the results of these expressions</summary>
       <ul>
         <li>
           <img alt="Exercise 1-1" src="/LabScreenshots/JSFundamentals/Exercise1-1.png">
@@ -228,9 +228,236 @@
 <details>
   <summary>JS Intermediate</summary>
   <ul>
-    <li>
-      <p>To be completed. VERY SOON!!</p>
-    </li>
+     <!-- SECTION I -->
+     <details>
+      <summary>
+        Exercise 1: Create a function that takes a string as a parameter and returns the string with the first
+        character of each word changed into a capital letter, as in the example below. Test it with
+        different strings.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabScreenshots/JSIntermediate/Exercise1-1.png" alt="JS Intermediate Exercise 1-1">
+          <img src="/LabScreenshots/JSIntermediate/Exercise1-2.png" alt="JS Intermediate Exercise 1-2">
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION II -->
+    <details>
+      <summary>
+        Exercise 2: Create a function <code>truncate(str, max)</code> that truncates a given string of text if its total
+        length is greater than the <code>max</code> length. It should return either the truncated text, with an
+        ellipsis (...) added to the end if it was too long, or the original text otherwise.
+      </summary>
+      <ul>
+        <li>
+          Write another variant of the truncate function that uses a conditional operator.
+        </li>
+        <li>
+          <img src="/LabScreenshots/JSIntermediate/Exercise2-1.png" alt="JS Intermediate Exercise 2-1">
+          <img src="/LabScreenshots/JSIntermediate/Exercise2-2.png" alt="JS Intermediate Exercise 2-2">
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION III -->
+    <details>
+      <summary>
+        Exercise 3: Use the following <code>animals</code> array for the below tasks. Test each one by printing the result to
+        the console.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_1.png" alt="JS Intermediate Figure 1">
+        </li>
+        <li>
+          Add 2 new values to the end.
+        </li>
+        <li>
+          Add 2 new values to the beginning.
+        </li>
+        <li>
+          Sort the values alphabetically.
+        </li>
+        <li>
+          Write a function <code>replaceMiddleAnimal(newValue)</code> that replaces the value in the
+          middle of the <code>animals</code> array with <code>newValue</code>.
+        </li>
+        <li>
+          Write a function <code>findMatchingAnimals(beginsWith)</code> that returns a new array
+          containing all the animals that begin with the <code>beginsWith</code> string. Try to make it work
+          regardless of upper/lower case.
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION IV -->
+    <details>
+      <summary>
+        Exercise 4: Write a function <code>camelCase(cssProp)</code> that changes dash-separated CSS properties like
+        <code>'margin-left'</code> into camel-cased <code>marginLeft'</code>.
+      </summary>
+      <ul>
+        <li>
+          The function should remove all dashes, and uppercase the first letter of each word after a dash.
+        </li>
+        <li>
+          Create variants of the camelCase function that use different types of for loops, and with and without the conditional operator.
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION V -->
+    <details>
+      <summary>
+        Exercise 5: Decimal number operations in JavaScript can lead to unexpected results, as in the
+        following:.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_2.png" alt="JS Intermediate 2">
+        </li>
+        <li>
+          We can sometimes avoid this using the toFixed function to force the number of decimal
+          places as below, but it’s not always useful:<br>
+          <img src="/LabFigures/JSIntermediate_3.png" alt="JS Intermediate 3">
+        </li>
+        <li>
+          Explain why the above code returns the wrong answer.
+        </li>
+        <li>
+          Create a function <code>currencyAddition(float1, float2)</code> which safely adds the two
+          decimal numbers <code>float1</code> and <code>float2</code> and returns the correct float result.
+        </li>
+        <li>
+          Create a function <code>currencyOperation(float1, float2, operation)</code> which
+          safely performs the given operation (either +, -, / or *) on the two numbers and return
+          the correct float result.
+        </li>
+        <li>
+          (Extension) Extend the above function to include a fourth argument numDecimals
+          which allows the operation to support different amounts of decimal places from 1 to 10.
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION VI -->
+    <details>
+      <summary>
+        Exercise 6: Create a function <code>unique(duplicatesArray)</code> which takes an array parameter that may
+        include duplicates. Your function should return an array containing only the unique values
+        from <code>duplicatesArray</code>.
+      </summary>
+      <ul>
+        <li>
+          Test with the following arrays and create another one of your own.<br>
+          <img src="/LabFigures/JSIntermediate_4.png" alt="JS Intermediate 4">
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION VII -->
+    <details>
+      <summary>
+        Exercise 7: Use the following array of book objects to practice the array functions for <code>map</code>, <code>find</code> and
+        <code>filter</code>. Test each of your answers to the below tasks.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_5.png" alt="JS Intermediate 5">
+        </li>
+        <li>
+          Write a function <code>getBookTitle(bookId)</code> that uses the <code>find</code> function to return the
+          title of the book object with the matching <code>id</code>.
+        </li>
+        <li>
+          Write a function <code>getOldBooks()</code> that uses the <code>filter</code> function to return all book
+          objects written before 1950.
+        </li>
+        <li>
+          Write a function <code>addGenre()</code> that uses the <code>map</code> function to add a new <code>genre</code> property
+          to all of the above books, with the value ‘classic’.
+        </li>
+        <li>
+          (Extension) Write a function <code>getTitles(authorInitial)</code> that uses <code>map</code> and
+          <code>filter</code> together to return an array of book titles for books written by authors whose
+          names start with <code>authorInitial</code>.
+        </li>
+        <li>
+          (Extension) Write a function <code>latestBook()</code> that uses <code>find</code> and <code>forEach</code> to get the
+          book with the most recent publication date.
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION VIII -->
+    <details>
+      <summary>
+        Exercise 8: The following code creates a new Map object for storing names beginning with A, B, or C
+        with their phone numbers.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_6.png" alt="JS Intermediate 6">
+        </li>
+        <li>
+          Create a new <code>phoneBookDEF</code> Map to store names beginning with D, E or F.
+        </li>
+        <li>
+          Initialise the contents of <code>phoneBookDEF</code> by passing in an array of keys/values.
+        </li>
+        <li>
+          Update the phone number for Caroline.
+        </li>
+        <li>
+          Write a function <code>printPhoneBook(contacts)</code> that prints the names and phone
+          numbers in the given Map.
+        </li>
+        <li>
+          Combine the contents of the two individual Maps into a single <code>phoneBook</code> Map.
+        </li>
+        <li>
+          Print out the full list of names in the combined phone book.
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION IX -->
+    <details>
+      <summary>
+        Exercise 9: Given the below salaries object, perform the following tasks.
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_7.png" alt="JS Intermediate 7">
+        </li>
+        <li>
+          Write a function <code>sumSalaries(salaries)</code> that calculates and returns the total of all salaries.
+        </li>
+        <li>
+          Write a function <code>topEarner</code>(salaries) that calculates and returns the name of the person
+          earning the highest salary
+        </li>
+      </ul>
+    </details>
+    <!-- SECTION X -->
+    <details>
+      <summary>
+        Exercise 10: The following code uses the Date object to print the current time and the number of hours
+        that have passed today so far. Extend the code to do the following:
+      </summary>
+      <ul>
+        <li>
+          <img src="/LabFigures/JSIntermediate_8.png" alt="JS Intermediate 8">
+        </li>
+        <li>
+          Print the total number of minutes that have passed so far today.
+        </li>
+        <li>
+          Print the total number of seconds that have passed so far today.
+        </li>
+        <li>
+          Calculate and print your age as: 'I am x years, y months and z days old'.
+        </li>
+        <li>
+          Write a function <code>daysInBetween(date1, date2)</code> which calculates and returns the amounts
+          of days in between the two given dates.
+        </li>
+      </ul>
+    </details>
   </ul>
 </details>
 <!-- JS Advanced -->

@@ -62,7 +62,6 @@ console.log(newTruncate(999, 10));
 console.log("\n" + "----Q3----");
 // #region [Question 3]
 const animals = ['Tiger', 'Giraffe']
-
 //Adding new values to the end of the animals array.
 animals.push("Lion");
 animals.push("Hippopotomus");
@@ -70,17 +69,118 @@ animals.push("Hippopotomus");
 //Adding new values to the start of the animals array.
 animals.unshift("Crocodile");
 animals.unshift("Elephant");
-
+animals.unshift("Hyena");
+//Updated console prints of the array:
 console.log(`Unsorterd Array: ${animals}`);
-
 sortedArray = animals.sort();
 console.log(`Sorted Array: ${sortedArray}`);
 
 function replaceMiddleAnimal(newValue)
 {
+    let indexOfValue = 0;
     arrayLength = animals.length;
-    if(arrayLength )
+    if(arrayLength % 2 === 0)
+    {
+        indexOfValue = (arrayLength / 2) - 1;
+    }
+    else
+    {
+        indexOfValue = Math.floor((arrayLength / 2));
+    }
+    animals[indexOfValue] = newValue;
+    console.log(`Replaced index[${indexOfValue}] of array.`);
 }
+replaceMiddleAnimal("Cow");
+console.log(`Updated Array: ${sortedArray}`);
+
+function findMatchingAnimals(beginsWith)
+{
+    beginsWith = beginsWith.toLowerCase();
+    let matchingAnimals = [];
+    for (const animal of animals)
+    {
+        if(animal[0].toLowerCase() === beginsWith)
+        {
+            matchingAnimals.push(animal);
+        }
+    }
+    console.log(`Found ${matchingAnimals.length} entries begining with the letter "${beginsWith}":\n${matchingAnimals}`);
+}
+
+findMatchingAnimals("C");
+// #endregion
+
+console.log("\n" + "----Q4----");
+// #region [Question 4]
+function camelCase(cssProp)
+{
+    let newStr = "";
+    seperated = cssProp.split("-");
+    for(index in seperated)
+    {
+        if (index != 0)
+        {
+            newStr += seperated[index].charAt(0).toUpperCase() + seperated[index].slice(1);
+        }
+        else
+        {
+            newStr += seperated[index];
+        }
+    }
+    return newStr;
+}
+
+function camelCaseLoop(cssProp)
+{
+    let newStr = "";
+    let capatilize = false;
+    for(const char of cssProp)
+    {
+        if(char !== "-")
+        {
+            if(capatilize)
+            {
+                newStr += char.toUpperCase();
+                capatilize = false;
+            }
+            else
+            {
+                newStr += char;
+            }
+        }
+        else
+        {
+            capatilize = true;
+        }
+
+    }
+    return newStr;
+}
+
+function camelCaseConditional(cssProp)
+{
+    let newStr = "";
+    seperated = cssProp.split("-");
+    for(index in seperated)
+    {
+        (index != 0) ? newStr += seperated[index].charAt(0).toUpperCase() + seperated[index].slice(1) : newStr += seperated[index];
+    }
+    return newStr;
+}
+console.log("Using camelCase() funtion:")
+console.log(camelCase('margin-left')); // marginLeft
+console.log(camelCase('background-image')); // backgroundImage
+console.log(camelCase('display')); // display
+
+console.log("\nUsing camelCaseLoop() funtion:")
+console.log(camelCaseLoop('margin-left')); // marginLeft
+console.log(camelCaseLoop('background-image')); // backgroundImage
+console.log(camelCaseLoop('display')); // display
+
+console.log("\nUsing camelCaseConditional() funtion:")
+console.log(camelCaseConditional('margin-left')); // marginLeft
+console.log(camelCaseConditional('background-image')); // backgroundImage
+console.log(camelCaseConditional('display')); // display
 // #endregion
 
 console.log("\n" + "----Q8----");

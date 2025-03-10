@@ -287,6 +287,10 @@
           containing all the animals that begin with the <code>beginsWith</code> string. Try to make it work
           regardless of upper/lower case.
         </li>
+        <li>
+          <img src="/LabScreenshots/JSIntermediate/Exercise3-1.png" alt="Exercise 3-1">
+          <img src="/LabScreenshots/JSIntermediate/Exercise3-2.png" alt="Exercise 3-2">
+        </li>
       </ul>
     </details>
     <!-- SECTION IV -->
